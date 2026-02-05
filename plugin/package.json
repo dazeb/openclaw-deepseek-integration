@@ -1,6 +1,6 @@
 {
   "name": "openclaw-deepseek-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek API Platform plugin for OpenClaw (Experimental)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
