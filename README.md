@@ -1,5 +1,8 @@
 # DeepSeek API Platform Integration for OpenClaw
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/dazeb/openclaw-deepseek-integration)
+
 This integration adds DeepSeek API Platform support to OpenClaw, allowing you to use DeepSeek's state-of-the-art language models including:
 - **DeepSeek Chat (V3.2)**: Non-thinking mode with 128K context
 - **DeepSeek Reasoner (V3.2)**: Thinking mode with 128K context and extended reasoning capabilities

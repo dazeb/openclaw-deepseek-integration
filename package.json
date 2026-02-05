@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/deepseek-openclaw-integration.git"
+    "url": "https://github.com/dazeb/openclaw-deepseek-integration.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/deepseek-openclaw-integration/issues"
+    "url": "https://github.com/dazeb/openclaw-deepseek-integration/issues"
   },
-  "homepage": "https://github.com/yourusername/deepseek-openclaw-integration#readme",
+  "homepage": "https://github.com/dazeb/openclaw-deepseek-integration#readme",
   "dependencies": {},
   "devDependencies": {},
   "engines": {
