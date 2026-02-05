@@ -2,6 +2,7 @@ import { emptyPluginConfigSchema } from "openclaw/plugin-sdk";
 
 // Default configuration for DeepSeek provider
 const DEEPSEEK_BASE_URL = "https://api.deepseek.com";
+
 const DEEPSEEK_MODELS = [
   {
     id: "deepseek-chat",

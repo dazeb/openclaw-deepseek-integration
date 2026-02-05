@@ -1,6 +1,6 @@
 {
   "name": "deepseek-openclaw-integration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DeepSeek API Platform integration for OpenClaw",
   "main": "index.js",
   "scripts": {

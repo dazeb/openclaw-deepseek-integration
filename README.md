@@ -30,7 +30,7 @@ Add the following configuration to your `openclaw.json` file:
     "providers": {
       "deepseek": {
         "baseUrl": "https://api.deepseek.com",
-         "apiKey": "${DEEPSEEK_API_KEY:-}",
+        "apiKey": "${DEEPSEEK_API_KEY:-}",
         "api": "openai-completions",
         "models": [
           {
@@ -136,6 +136,7 @@ openclaw models set deepseek/deepseek-reasoner
 - ✅ **Auth Profile Support**: Optional persistent API key storage in OpenClaw auth profiles
 - ✅ **Automatic Detection**: Models appear in `openclaw models list` automatically
 
+
 ## Usage Examples
 
 ### Use DeepSeek Reasoner for complex tasks:
@@ -182,6 +183,8 @@ If you need to use a different endpoint (e.g., for compatibility):
 ```json
 "baseUrl": "https://api.deepseek.com/v1"
 ```
+
+
 
 ### Model Aliases
 Add custom aliases for easier reference:
