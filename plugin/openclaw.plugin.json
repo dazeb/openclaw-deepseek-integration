@@ -1,0 +1,18 @@
+{
+  "id": "deepseek-provider",
+  "providers": ["deepseek"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "DeepSeek API key (can also be set via DEEPSEEK_API_KEY environment variable)"
+      },
+      "baseUrl": {
+        "type": "string",
+        "description": "DeepSeek API base URL (default: https://api.deepseek.com)"
+      }
+    }
+  }
+}
