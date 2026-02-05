@@ -1,3 +1,6 @@
+
+<img width="2816" height="1536" alt="Gemini_Generated_Image_c6sn77c6sn77c6sn" src="https://github.com/user-attachments/assets/888fd686-08de-420d-90e6-02a2089e0e57" />
+
 # DeepSeek API Platform Integration for OpenClaw
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
