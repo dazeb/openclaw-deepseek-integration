@@ -27,7 +27,7 @@ Add the following configuration to your `openclaw.json` file:
     "providers": {
       "deepseek": {
         "baseUrl": "https://api.deepseek.com",
-        "apiKey": "${DEEPSEEK_API_KEY}",
+         "apiKey": "${DEEPSEEK_API_KEY:-}",
         "api": "openai-completions",
         "models": [
           {
@@ -87,7 +87,17 @@ Or export it in your shell:
 export DEEPSEEK_API_KEY="your-api-key-here"
 ```
 
-### 3. Verify Installation
+### 3. Auth Profile Setup (Optional)
+
+For persistent API key storage (instead of environment variables), you can add an auth profile using the included script:
+
+```bash
+./add-deepseek-auth.sh "your-api-key-here"
+```
+
+This stores your API key securely in OpenClaw's auth profiles and allows you to use DeepSeek models without setting environment variables.
+
+### 4. Verify Installation
 
 ```bash
 openclaw models list | grep deepseek
@@ -99,7 +109,7 @@ deepseek/deepseek-chat                     text       128k     no    yes   confi
 deepseek/deepseek-reasoner                 text       128k     no    yes   configured
 ```
 
-### 4. Set as Default Model (Optional)
+### 5. Set as Default Model (Optional)
 
 ```bash
 openclaw models set deepseek/deepseek-reasoner
@@ -120,6 +130,7 @@ openclaw models set deepseek/deepseek-reasoner
 - ✅ **Thinking Mode Support**: Full support for DeepSeek Reasoner's reasoning capabilities
 - ✅ **Accurate Cost Tracking**: Per-token pricing for both models
 - ✅ **Environment Variable Security**: API key stored securely in environment variables
+- ✅ **Auth Profile Support**: Optional persistent API key storage in OpenClaw auth profiles
 - ✅ **Automatic Detection**: Models appear in `openclaw models list` automatically
 
 ## Usage Examples
@@ -186,6 +197,24 @@ Add custom aliases for easier reference:
   }
 }
 ```
+
+## Optional: Plugin Installation (Advanced)
+
+For users who prefer plugin-based integration, an experimental OpenClaw plugin is included in the `plugin/` directory.
+
+### Plugin Features
+- Programmatic provider registration
+- Potential for future enhancements (API key management, etc.)
+
+### Setup
+```bash
+cd plugin
+npm install
+npm run build
+openclaw plugins enable ./path/to/plugin
+```
+
+**Note**: The configuration-based approach is recommended for most users. The plugin is experimental and may require additional development.
 
 ## License
 
