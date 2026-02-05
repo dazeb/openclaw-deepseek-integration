@@ -1,0 +1,32 @@
+{
+  "name": "deepseek-openclaw-integration",
+  "version": "1.0.0",
+  "description": "DeepSeek API Platform integration for OpenClaw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "setup": "./setup.sh"
+  },
+  "keywords": [
+    "openclaw",
+    "deepseek",
+    "llm",
+    "ai",
+    "integration"
+  ],
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/deepseek-openclaw-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/deepseek-openclaw-integration/issues"
+  },
+  "homepage": "https://github.com/yourusername/deepseek-openclaw-integration#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
