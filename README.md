@@ -39,10 +39,10 @@ Add the following configuration to your `openclaw.json` file:
             "reasoning": false,
             "input": ["text"],
             "cost": {
-              "input": 0.00000028,
-              "output": 0.00000042,
-              "cacheRead": 0.000000028,
-              "cacheWrite": 0.00000028
+              "input": 0.28,        // $0.28 per 1M tokens (cache miss)
+              "output": 0.42,       // $0.42 per 1M tokens
+              "cacheRead": 0.028,   // $0.028 per 1M tokens (cache hit)
+              "cacheWrite": 0.28    // $0.28 per 1M tokens (assumed same as cache miss)
             },
             "contextWindow": 128000,
             "maxTokens": 8192
@@ -53,10 +53,10 @@ Add the following configuration to your `openclaw.json` file:
             "reasoning": true,
             "input": ["text"],
             "cost": {
-              "input": 0.00000028,
-              "output": 0.00000042,
-              "cacheRead": 0.000000028,
-              "cacheWrite": 0.00000028
+              "input": 0.28,        // $0.28 per 1M tokens (cache miss)
+              "output": 0.42,       // $0.42 per 1M tokens
+              "cacheRead": 0.028,   // $0.028 per 1M tokens (cache hit)
+              "cacheWrite": 0.28    // $0.28 per 1M tokens (assumed same as cache miss)
             },
             "contextWindow": 128000,
             "maxTokens": 65536
@@ -120,12 +120,16 @@ openclaw models set deepseek/deepseek-reasoner
 
 ## Model Specifications
 
-| Model | ID | Reasoning | Context Window | Max Output | Input Types | Cost (per token) |
+| Model | ID | Reasoning | Context Window | Max Output | Input Types | Cost (per 1M tokens) |
 |-------|----|-----------|----------------|------------|-------------|------------------|
-| DeepSeek Chat | `deepseek-chat` | `false` | 128,000 | 8,192 | Text | Input: $0.00000028, Output: $0.00000042 |
-| DeepSeek Reasoner | `deepseek-reasoner` | `true` | 128,000 | 65,536 | Text | Input: $0.00000028, Output: $0.00000042 |
+| DeepSeek Chat | `deepseek-chat` | `false` | 128,000 | 8,192 | Text | Input: $0.28, Output: $0.42 |
+| DeepSeek Reasoner | `deepseek-reasoner` | `true` | 128,000 | 65,536 | Text | Input: $0.28, Output: $0.42 |
 
 **Note**: Cache read/write costs are included for accurate token usage tracking.
+
+> **Note:** Costs are per 1M tokens (OpenClaw format).  
+> DeepSeek V3.2 pricing (Feb 2026): $0.028/$0.28/$0.42 per 1M tokens (cache hit/miss/output).  
+> Sources: [OpenClaw](https://docs.openclaw.ai/reference/token-use), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing).
 
 ## Features
 
