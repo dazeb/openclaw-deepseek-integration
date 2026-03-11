@@ -30,7 +30,7 @@ Add the following configuration to your `openclaw.json` file:
     "providers": {
       "deepseek": {
         "baseUrl": "https://api.deepseek.com",
-        "apiKey": "${DEEPSEEK_API_KEY:-}",
+        "apiKey": "${DEEPSEEK_API_KEY}",
         "api": "openai-completions",
         "models": [
           {
